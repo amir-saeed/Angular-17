@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HelloServerComponent } from './hello-server/hello-server.component';
 import { HelloClientComponent } from './hello-client/hello-client.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'server', component: HelloServerComponent, pathMatch: 'full' },
   { path: 'client', component: HelloClientComponent, pathMatch: 'full' },
   { path: '', redirectTo: '/server', pathMatch: 'full' },
@@ -11,11 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    // HelloServerComponent,
-    // HelloClientComponent
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
