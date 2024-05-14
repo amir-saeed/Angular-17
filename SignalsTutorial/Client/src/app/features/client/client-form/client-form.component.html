@@ -1,0 +1,29 @@
+<button mat-raised-button color="accent" (click)="back()">Back</button>
+<h2>{{mainTitle}}</h2>
+<div class="example-container">
+    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+        <div>
+            <mat-label for="clientname">Client Name:</mat-label>
+            <input matInput type="text" formControlName="clientname" id="clientname">
+        </div>
+        <div>
+            <mat-label for="clientnote">Client Notes:</mat-label>
+            <textarea matInput formControlName="clientnote" id="clientnote" rows="10"></textarea>
+        </div>
+
+        <div>
+            <mat-label for="clienttype">Client Type:</mat-label>
+            <mat-select formControlName="clienttype" id="clienttype">
+                <mat-option value="Media">Media</mat-option>
+                <mat-option value="Finance">Finance</mat-option>
+                <mat-option value="Catering">Catering</mat-option>
+            </mat-select>
+        </div>
+        <div>
+            <mat-label for="lineofbusiness">Line of Business:</mat-label>
+            <app-auto-complete [options]="myOptions" (optionSelected)="onOptionSelected($event)"
+                formControlName="lineofbusiness" id="lineofbusiness"></app-auto-complete>
+        </div>
+        <button mat-raised-button color="primary" [disabled]="clientForm.invalid">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "lineofbusiness": "Production",
+        "isactive": "true"
+    },
+    {
+        "id": 2,
+        "lineofbusiness": "Logistics",
+        "isactive": "true"
+    },
+    {
+        "id": 3,
+        "lineofbusiness": "Technical",
+        "isactive": "true"
+    },
+    {
+        "id": 4,
+        "lineofbusiness": "Design",
+        "isactive": "true"
+    },
+    {
+        "id": 5,
+        "lineofbusiness": "Strategy",
+        "isactive": "true"
+    },
+    {
+        "id": 6,
+        "lineofbusiness": "Account Services",
+        "isactive": "true"
+    },
+    {
+        "id": 7,
+        "lineofbusiness": "Marketing",
+        "isactive": "true"
+    },
+    {
+        "id": 8,
+        "lineofbusiness": "Finance",
+        "isactive": "true"
+    }
+]

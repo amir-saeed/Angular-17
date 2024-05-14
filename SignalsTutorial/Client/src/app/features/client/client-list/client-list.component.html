@@ -1,0 +1,7 @@
+<h1>I.T. Associates</h1>
+<app-list 
+    [columnDefinitions]="columnDefinitions" 
+    [dataSource]="clients" 
+    [highlightedItemId]="highlightedItemId">
+</app-list>
+<button mat-raised-button color="primary" (click)="addNewClient()">Add New Client</button>

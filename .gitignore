@@ -6,3 +6,9 @@ SSR/node_modules/.bin/
 SSR/node_modules/
 
 SSR/.angular/cache/17.2.2/vite/deps/
+
+SignalsTutorial/Client/node_modules/.bin/
+
+SignalsTutorial/Client/node_modules/\@angular-devkit/architect/src/jobs/
+
+SignalsTutorial/Client/node_modules/\@angular-devkit/architect/src/jobs/

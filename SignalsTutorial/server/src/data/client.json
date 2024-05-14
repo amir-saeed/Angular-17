@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "clientName": "John Lewis & Partners",
+        "clientNote": "",
+        "clientType": "Media",
+        "lineOfBusiness": "Production"
+    },
+    {
+        "id": 2,
+        "clientName": "Cisco",
+        "clientNote": "",
+        "clientType": "Finance",
+        "lineOfBusiness": "Production"
+    },
+    {
+        "id": 3,
+        "clientName": "Oracle",
+        "clientNote": "",
+        "clientType": "Finance",
+        "lineOfBusiness": "Finance"
+    },
+    {
+        "id": 4,
+        "clientName": "Talking Business",
+        "clientNote": "",
+        "clientType": "Media",
+        "lineOfBusiness": "Production"
+    },
+    {
+        "id": 5,
+        "clientName": "Co-Ownership",
+        "clientNote": "",
+        "clientType": "Catering",
+        "lineOfBusiness": "Logistics"
+    },
+    {
+        "id": 6,
+        "clientName": "The Oscas",
+        "clientNote": "",
+        "clientType": "Media",
+        "lineOfBusiness": "Strategy"
+    },
+    {
+        "id": 7,
+        "clientName": "Business Thinking",
+        "clientNote": "",
+        "clientType": "Finance",
+        "lineOfBusiness": "Logistics"
+    },
+    {
+        "id": 8,
+        "clientName": "Pradaxa",
+        "clientNote": "",
+        "clientType": "Catering",
+        "lineOfBusiness": "Strategy"
+    },
+    {
+        "id": 9,
+        "clientName": "Amway European Leadership",
+        "clientNote": "",
+        "clientType": "Finance",
+        "lineOfBusiness": "Logistics"
+    },
+    {
+        "id": 10,
+        "clientName": "M&S - Food",
+        "clientNote": "",
+        "clientType": "Catering",
+        "lineOfBusiness": "Finance"
+    },
+    {
+        "clientName": "Test Client name",
+        "clientNote": "These are important notes",
+        "clientType": "Media",
+        "lineOfBusiness": "Account Services",
+        "id": 11
+    },
+    {
+        "clientName": "asdf 444 ggggg",
+        "clientNote": "These are my notes",
+        "clientType": "Media",
+        "lineOfBusiness": "Finance",
+        "id": 12
+    },
+    {
+        "clientName": "Great Marketing Company",
+        "clientNote": "Notes list",
+        "clientType": "Catering",
+        "lineOfBusiness": "Design",
+        "id": 13
+    },
+    {
+        "clientName": "Test client new 17",
+        "clientNote": "New notes",
+        "clientType": "Finance",
+        "lineOfBusiness": "Marketing",
+        "id": 14
+    }
+]

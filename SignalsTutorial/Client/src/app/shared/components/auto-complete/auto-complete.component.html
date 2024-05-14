@@ -1,0 +1,6 @@
+<input type="text" placeholder="Search" aria-label="Search" matInput [formControl]="myControl" [matAutocomplete]="auto">
+<mat-autocomplete #auto="matAutocomplete">
+    @for (option of filteredOptions$ | async; track option) {
+        <mat-option [value]="option" (onSelectionChange)="onSelect(option)">{{option}}</mat-option>
+    }
+</mat-autocomplete>
