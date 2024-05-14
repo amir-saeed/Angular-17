@@ -38,10 +38,10 @@ export class ClientFormComponent implements OnInit {
     });
 
     this.clientForm = this.formBuilder.group({
-      clientname: ['', Validators.required],
-      clientnote: [''],
-      clienttype: ['', Validators.required],
-      lineofbusiness: ['']
+      clientName: ['', Validators.required],
+      clientNote: [''],
+      clientType: ['', Validators.required],
+      lineOfBusiness: ['']
     });
   }
 
@@ -51,10 +51,10 @@ export class ClientFormComponent implements OnInit {
         this.clientData = this.sharedService.form();
         if (this.clientData) {
           this.clientForm.setValue({
-            clientname: this.clientData.clientName,
-            clientnote: this.clientData.clientNote,
-            clienttype: this.clientData.clientType,
-            lineofbusiness: this.clientData.lineOfBusiness
+            clientName: this.clientData.clientName,
+            clientNote: this.clientData.clientNote,
+            clientType: this.clientData.clientType,
+            lineOfBusiness: this.clientData.lineOfBusiness
           });
         }
       });
