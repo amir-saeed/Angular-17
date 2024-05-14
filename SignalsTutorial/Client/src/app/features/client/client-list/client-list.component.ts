@@ -19,29 +19,28 @@ export class ClientListComponent implements OnInit {
     { key: 'lineOfBusiness', header: 'Line Of Business' }
   ];
 
-  private clientService = inject(ClientService);
-  private router = inject(Router);
-  private sharedService = inject(SharedService);
-
-
+  #clientService = inject(ClientService);
+  #router = inject(Router);
+  #sharedService = inject(SharedService);
+  
   highlightedItemId: number = 0;
   client!: Client;
 
   constructor() {
     effect(() => {
-      this.highlightedItemId = this.sharedService.highlightedItemId();
+      this.highlightedItemId = this.#sharedService.highlightedItemId();
     });
   }
 
   ngOnInit(): void {
-    this.clientService.getClients()
+    this.#clientService.getClients()
       .subscribe((data: any) => {
         this.clients = data.data;
       });
   }
 
   addNewClient() {
-    this.sharedService.setFormFields({});
-    this.router.navigate(['/client/add']);
+    this.#sharedService.setFormFields({});
+    this.#router.navigate(['/client/add']);
   }
 }
