@@ -9,7 +9,7 @@ import { SharedService } from '../../services/shared.service';
   selector: 'app-list',
   standalone: false,
   templateUrl: './list.component.html',
-  styleUrl: './list.component.scss'
+  styleUrl: './list.component.scss',
 })
 export class ListComponent implements OnInit {
   @Input() columnDefinitions: ColumnDefinition[] = [];
@@ -18,12 +18,12 @@ export class ListComponent implements OnInit {
 
   constructor(
     private sharedService: SharedService,
-    private router: Router
-  ) { }
-  ngOnInit(): void { }
+    private router: Router,
+  ) {}
+  ngOnInit(): void {}
 
   get displayedColumns(): string[] {
-    return this.columnDefinitions.map(col => col.key);
+    return this.columnDefinitions.map((col) => col.key);
   }
 
   selectItem(element: Client) {

@@ -2,7 +2,7 @@ import { Injectable, Signal, signal } from '@angular/core';
 import { Client } from '../../features/client/models/client.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SharedService {
   private formSignal = signal<Client>({
@@ -10,12 +10,12 @@ export class SharedService {
     clientName: '',
     clientNote: '',
     clientType: '',
-    lineOfBusiness: ''
+    lineOfBusiness: '',
   });
 
   private highlightedItemIdSignal = signal<number>(0);
 
-  constructor() { }
+  constructor() {}
 
   setHighlightedItemId(itemId: number): void {
     this.highlightedItemIdSignal.set(itemId);

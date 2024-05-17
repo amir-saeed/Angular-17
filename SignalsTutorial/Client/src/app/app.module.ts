@@ -6,18 +6,9 @@ import { PageNotFoundComponent } from './features/page-not-found/page-not-found.
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  declarations: [
-    AppComponent,
-    PageNotFoundComponent,
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, PageNotFoundComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

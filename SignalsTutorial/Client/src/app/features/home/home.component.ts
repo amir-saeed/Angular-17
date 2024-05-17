@@ -7,10 +7,10 @@ import { MaterialModule } from '../../material.module';
   standalone: true,
   imports: [MaterialModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
   continue() {
     this.router.navigate(['/client']);
   }

@@ -9,10 +9,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { MaterialModule } from '../../material.module';
 
 @NgModule({
-  declarations: [
-    ClientListComponent,
-    ClientFormComponent
-  ],
+  declarations: [ClientListComponent, ClientFormComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -20,10 +17,10 @@ import { MaterialModule } from '../../material.module';
     RouterModule.forChild([
       { path: '', component: ClientListComponent },
       { path: 'add', component: ClientFormComponent },
-      { path: 'edit/:id', component: ClientFormComponent }
+      { path: 'edit/:id', component: ClientFormComponent },
     ]),
     SharedModule,
-    MaterialModule
-  ]
+    MaterialModule,
+  ],
 })
-export class ClientModule { }
+export class ClientModule {}

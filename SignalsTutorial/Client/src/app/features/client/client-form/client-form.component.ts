@@ -10,7 +10,7 @@ import { LineOfBusiness } from '../models/lineOfBusiness.model';
 @Component({
   selector: 'app-client-form',
   templateUrl: './client-form.component.html',
-  styleUrl: './client-form.component.scss'
+  styleUrl: './client-form.component.scss',
 })
 export class ClientFormComponent implements OnInit {
   clientForm!: FormGroup;
@@ -28,12 +28,12 @@ export class ClientFormComponent implements OnInit {
     private clientService: ClientService,
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
   ) {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       this.clientId = parseInt(params.get('id')!, 10);
       if (this.clientId > 0) {
-        this.mainTitle = 'Edit Client'
+        this.mainTitle = 'Edit Client';
       }
     });
 
@@ -41,7 +41,7 @@ export class ClientFormComponent implements OnInit {
       clientName: ['', Validators.required],
       clientNote: [''],
       clientType: ['', Validators.required],
-      lineOfBusiness: ['']
+      lineOfBusiness: [''],
     });
   }
 
@@ -54,7 +54,7 @@ export class ClientFormComponent implements OnInit {
             clientName: this.clientData.clientName,
             clientNote: this.clientData.clientNote,
             clientType: this.clientData.clientType,
-            lineOfBusiness: this.clientData.lineOfBusiness
+            lineOfBusiness: this.clientData.lineOfBusiness,
           });
         }
       });
@@ -65,11 +65,9 @@ export class ClientFormComponent implements OnInit {
   onSubmit(): void {
     if (this.clientForm.valid) {
       const formValues = { ...this.clientForm.value, id: this.clientId };
-      this.clientService
-        .addUpdateClient(formValues)
-        .subscribe(() => {
-          this.router.navigate(['/client']);
-        });
+      this.clientService.addUpdateClient(formValues).subscribe(() => {
+        this.router.navigate(['/client']);
+      });
     }
   }
 
@@ -82,16 +80,15 @@ export class ClientFormComponent implements OnInit {
   }
 
   private fetchLineOfBusiness() {
-    return this.clientService
-      .getLineOfBusiness()
-      .subscribe((lobList: any) => {
-        const lob: LineOfBusiness[] = lobList.data;
-        lob.filter((item: LineOfBusiness) => item.isactive.toString() === 'true')
-          .forEach((lobItem) => {
-            this.myOptions.push(lobItem.lineofbusiness);
-          });
+    return this.clientService.getLineOfBusiness().subscribe((lobList: any) => {
+      const lob: LineOfBusiness[] = lobList.data;
+      lob
+        .filter((item: LineOfBusiness) => item.isactive.toString() === 'true')
+        .forEach((lobItem) => {
+          this.myOptions.push(lobItem.lineofbusiness);
+        });
 
-        this.myOptions.sort();
-      });
+      this.myOptions.sort();
+    });
   }
 }

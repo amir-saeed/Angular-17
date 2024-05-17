@@ -7,20 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    ListComponent,
-    AutoCompleteComponent
-  ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule
-  ],
-  exports: [
-    ListComponent,
-    AutoCompleteComponent
-  ]
+  declarations: [ListComponent, AutoCompleteComponent],
+  imports: [CommonModule, MaterialModule, FormsModule, ReactiveFormsModule, RouterModule],
+  exports: [ListComponent, AutoCompleteComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

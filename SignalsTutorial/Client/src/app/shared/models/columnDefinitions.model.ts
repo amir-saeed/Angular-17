@@ -1,4 +1,4 @@
 export interface ColumnDefinition {
-    key: string;
-    header: string;
+  key: string;
+  header: string;
 }

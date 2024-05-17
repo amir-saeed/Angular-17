@@ -11,32 +11,31 @@ import { startWith, map, debounceTime, distinctUntilChanged } from 'rxjs/operato
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => AutoCompleteComponent),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class AutoCompleteComponent implements ControlValueAccessor {
   @Input() options: string[] = [];
   @Output() optionSelected = new EventEmitter<string>();
 
-  private propagateChange = (_: any) => { };
+  private propagateChange = (_: any) => {};
 
   myControl = new FormControl();
   filteredOptions$: Observable<string[]>;
 
   constructor() {
-    this.filteredOptions$ = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        debounceTime(300),
-        distinctUntilChanged(),
-        map(value => this._filter(value))
-      );
+    this.filteredOptions$ = this.myControl.valueChanges.pipe(
+      startWith(''),
+      debounceTime(300),
+      distinctUntilChanged(),
+      map((value) => this._filter(value)),
+    );
   }
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    return this.options.filter((option) => option.toLowerCase().includes(filterValue));
   }
 
   onSelect(option: string): void {
@@ -51,8 +50,7 @@ export class AutoCompleteComponent implements ControlValueAccessor {
     this.propagateChange = fn;
   }
 
-  registerOnTouched(fn: any): void {
-  }
+  registerOnTouched(fn: any): void {}
 
   setDisabledState?(isDisabled: boolean): void {
     if (isDisabled) {

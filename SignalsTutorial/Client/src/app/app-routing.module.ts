@@ -7,28 +7,23 @@ import { SelectivePreloadingStrategyService } from './selective-preloading-strat
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'client',
-    loadChildren: () => import('./features/client/client.module').then(m => m.ClientModule)
+    loadChildren: () => import('./features/client/client.module').then((m) => m.ClientModule),
   },
   { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      {
-        enableTracing: false,
-        preloadingStrategy: SelectivePreloadingStrategyService,
-      }
-    )
+    RouterModule.forRoot(appRoutes, {
+      enableTracing: false,
+      preloadingStrategy: SelectivePreloadingStrategyService,
+    }),
   ],
-  exports: [
-    RouterModule
-  ]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

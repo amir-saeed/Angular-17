@@ -21,7 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatMenuModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
   ],
   exports: [
     MatAutocompleteModule,
@@ -32,7 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatMenuModule,
     MatTableModule,
-    MatIconModule
-  ]
+    MatIconModule,
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}

@@ -7,7 +7,7 @@ import { SharedService } from '../../../shared/services/shared.service';
 @Component({
   selector: 'app-client-list',
   templateUrl: './client-list.component.html',
-  styleUrl: './client-list.component.scss'
+  styleUrl: './client-list.component.scss',
 })
 export class ClientListComponent implements OnInit {
   clients: Client[] = [];
@@ -16,13 +16,13 @@ export class ClientListComponent implements OnInit {
     { key: 'clientName', header: 'Client Name' },
     { key: 'clientNote', header: 'Client Note' },
     { key: 'clientType', header: 'Client Type' },
-    { key: 'lineOfBusiness', header: 'Line Of Business' }
+    { key: 'lineOfBusiness', header: 'Line Of Business' },
   ];
 
   #clientService = inject(ClientService);
   #router = inject(Router);
   #sharedService = inject(SharedService);
-  
+
   highlightedItemId: number = 0;
   client!: Client;
 
@@ -33,10 +33,9 @@ export class ClientListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.#clientService.getClients()
-      .subscribe((data: any) => {
-        this.clients = data.data;
-      });
+    this.#clientService.getClients().subscribe((data: any) => {
+      this.clients = data.data;
+    });
   }
 
   addNewClient() {

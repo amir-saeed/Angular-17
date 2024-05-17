@@ -1,5 +1,5 @@
 export interface LineOfBusiness {
-    id: number;
-    lineofbusiness: string;
-    isactive: boolean;
+  id: number;
+  lineofbusiness: string;
+  isactive: boolean;
 }

@@ -5,13 +5,13 @@ import { Client } from '../../features/client/models/client.model';
 import { LineOfBusiness } from '../../features/client/models/lineOfBusiness.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HttpService {
   private apiUrl = 'http://localhost:3000/v1/client/';
   private apiLobUrl = `${this.apiUrl}lob`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   fetchClient() {
     return this.http.get<Client[]>(this.apiUrl);
   }

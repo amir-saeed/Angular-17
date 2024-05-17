@@ -1,29 +1,32 @@
 <button mat-raised-button color="accent" (click)="back()">Back</button>
-<h2>{{mainTitle}}</h2>
+<h2>{{ mainTitle }}</h2>
 <div class="example-container">
-    <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
-        <div>
-            <mat-label for="clientName">Client Name:</mat-label>
-            <input matInput type="text" formControlName="clientName" id="clientName">
-        </div>
-        <div>
-            <mat-label for="clientNote">Client Notes:</mat-label>
-            <textarea matInput formControlName="clientNote" id="clientNote" rows="10"></textarea>
-        </div>
+  <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-label for="clientName">Client Name:</mat-label>
+      <input matInput type="text" formControlName="clientName" id="clientName" />
+    </div>
+    <div>
+      <mat-label for="clientNote">Client Notes:</mat-label>
+      <textarea matInput formControlName="clientNote" id="clientNote" rows="10"></textarea>
+    </div>
 
-        <div>
-            <mat-label for="clientType">Client Type:</mat-label>
-            <mat-select formControlName="clientType" id="clientType">
-                <mat-option value="Media">Media</mat-option>
-                <mat-option value="Finance">Finance</mat-option>
-                <mat-option value="Catering">Catering</mat-option>
-            </mat-select>
-        </div>
-        <div>
-            <mat-label for="lineOfBusiness">Line of Business:</mat-label>
-            <app-auto-complete [options]="myOptions" (optionSelected)="onOptionSelected($event)"
-                formControlName="lineOfBusiness" id="lineOfBusiness"></app-auto-complete>
-        </div>
-        <button mat-raised-button color="primary" [disabled]="clientForm.invalid">Submit</button>
-    </form>
+    <div>
+      <mat-label for="clientType">Client Type:</mat-label>
+      <mat-select formControlName="clientType" id="clientType">
+        <mat-option value="Media">Media</mat-option>
+        <mat-option value="Finance">Finance</mat-option>
+        <mat-option value="Catering">Catering</mat-option>
+      </mat-select>
+    </div>
+    <div>
+      <mat-label for="lineOfBusiness">Line of Business:</mat-label>
+      <app-auto-complete
+        [options]="myOptions"
+        (optionSelected)="onOptionSelected($event)"
+        formControlName="lineOfBusiness"
+        id="lineOfBusiness"></app-auto-complete>
+    </div>
+    <button mat-raised-button color="primary" [disabled]="clientForm.invalid">Submit</button>
+  </form>
 </div>
