@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   standalone: true,
   selector: 'app-display',
-  template: `<h3>Hello, {{ displayName }}!</h3>`
+  template: `<h3>Hello, {{ displayName() }}!</h3>`
 })
 export class DisplayComponent {
-  @Input() displayName: string = '';
+  displayName = input.required<string>();
 }
