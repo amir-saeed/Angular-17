@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .theme-toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+  
